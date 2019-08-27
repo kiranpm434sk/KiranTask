@@ -1,0 +1,216 @@
+
+<h1>Task Boards-<button class="btn btn-success">YOURDRS Web App</button></h1>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3>To Do</h3>
+      <div class="container" *ngFor="let item of arr;let i=index" >
+      <div class="card" *ngIf="item.status=='todo'">
+      <div class="card-body">{{item.desc}}</div>
+      <div class="card-footer"><label class="btn btn-primary btn-sm-2 text-white">{{item.due_date}}</label>&nbsp;&nbsp;
+      <label class="btn btn-danger btn-sm-2 text-white" >{{item.priority}}</label>&nbsp;&nbsp;
+      <label><button class="btn btn-primary" (click)="openEdit(content,i)">Edit</button></label></div>
+      </div>
+      </div>
+      </div>
+      </div>
+<div class="column">
+<div class="card">
+<h3>In Progress</h3>
+<div class="container" *ngFor="let item of arr;let i=index" >
+    <div class="card" *ngIf="item.status=='In Progress'">
+<div class="card-body">{{item.desc}}</div>
+<div class="card-footer"><label class="btn btn-primary btn-sm-2 text-white">{{item.due_date}}</label>&nbsp;&nbsp;
+<label class="btn btn-danger btn-sm-2 text-white" >{{item.priority}}</label>&nbsp;&nbsp;
+<label><button class="btn btn-primary" (click)="openEdit(content,i)">Edit</button></label></div>
+</div>
+</div>
+</div>
+</div>
+<div class="column">
+    <div class="card">
+    <h3>Development Completed</h3>
+    <div class="container" *ngFor="let item of arr;let i=index" >
+        <div class="card" *ngIf="item.status=='Development Completed'">
+    <div class="card-body">{{item.desc}}</div>
+    <div class="card-footer"><label class="btn btn-primary btn-sm-2 text-white">{{item.due_date}}</label>&nbsp;&nbsp;
+    <label class="btn btn-danger btn-sm-2 text-white" >{{item.priority}}</label>&nbsp;&nbsp;
+    <label><button class="btn btn-primary" (click)="openEdit(content,i)">Edit</button></label></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="column">
+        <div class="card">
+        <h3>QA Progress</h3>
+        <div class="container" *ngFor="let item of arr;let i=index" >
+            <div class="card" *ngIf="item.status=='QA Progress'">
+        <div class="card-body">{{item.desc}}</div>
+        <div class="card-footer"><label class="btn btn-primary btn-sm-2 text-white">{{item.due_date}}</label>&nbsp;&nbsp;
+        <label class="btn btn-danger btn-sm-2 text-white" >{{item.priority}}</label>&nbsp;&nbsp;
+        <label><button class="btn btn-primary" (click)="openEdit(content,i)">Edit</button></label></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+        <h3>System Testing Started</h3>
+        <div class="container" *ngFor="let item of arr;let i=index" >
+            <div class="card" *ngIf="item.status=='System Testing Started'">
+        <div class="card-body">{{item.desc}}</div>
+        <div class="card-footer"><label class="btn btn-primary btn-sm-2 text-white">{{item.due_date}}</label>&nbsp;&nbsp;
+        <label class="btn btn-danger btn-sm-2 text-white" >{{item.priority}}</label>&nbsp;&nbsp;
+        <label><button class="btn btn-primary" (click)="openEdit(content,i)">Edit</button></label></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+        <h3>System Testing Completed</h3>
+        <div class="container" *ngFor="let item of arr;let i=index" >
+            <div class="card" *ngIf="item.status=='System Testing Completed'">
+        <div class="card-body">{{item.desc}}</div>
+        <div class="card-footer"><label class="btn btn-primary btn-sm-2 text-white">{{item.due_date}}</label>&nbsp;&nbsp;
+        <label class="btn btn-danger btn-sm-2 text-white" >{{item.priority}}</label>&nbsp;&nbsp;
+        <label><button class="btn btn-primary" (click)="openEdit(content,i)">Edit</button></label></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+<!-- <ng-template #content let-modal>
+<h1 class="center">Edit Task</h1>
+<form (ngSubmit)="UpdateItem(f)" #f="ngForm" >
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-8">
+<label><b>Task ID</b></label>
+<input name="task_id" [(ngModel)]="task_id" #Id="ngModel" type="text" class="form-control" placeholder="enter name of organisation">
+</div>
+<div class="col-xs-6 col-sm-4">
+<label><b>Due_date</b></label>
+<input name="due_date" [(ngModel)]="due_date" #Due="ngModel" type="text" class="form-control" placeholder="enter address of organisation">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-6 col-md-4">
+<label><b>Title</b></label>
+<input class="T" name="title" [(ngModel)]="title" #Title="ngModel" type="text" class="form-control" placeholder="enter description of organisation">
+</div><br/>
+</div>
+<div class="row">
+<div class="col-xs-6 col-sm-4">
+<label><b>Desc</b></label>
+<input name="desc" [(ngModel)]="desc" #Desc="ngModel" type="text" class="form-control" placeholder="enter address of organisation">
+</div></div>
+<div class="row">
+<div class="clearfix visible-xs-block"></div>
+<div class="col-xs-6 col-sm-4">
+<label><b>Priority</b></label>
+<input name="priority" [(ngModel)]="priority" #Pri="ngModel" type="text" class="form-control" placeholder="enter city of organisation">
+</div>
+<div class="col-xs-6 col-sm-4">
+<label><b>Assigned_to</b></label>
+<input name="assigned_to" [(ngModel)]="assigned_to" #At="ngModel" type="text" class="form-control" placeholder="enter state of organisation">
+</div>
+</div>
+<div class="row">
+<div class="clearfix visible-xs-block"></div>
+<div class="col-xs-6 col-sm-4">
+<label><b>Comments</b></label>
+<input name="comments" [(ngModel)]="comments" #Comm="ngModel" type="text" class="form-control" placeholder="enter country of organisation">
+</div>
+</div>
+<div class="container">
+<div class="row custom-wrapper">
+<div class="col-md-12">
+<div class="group-gap">
+<div class="d-block my-3">
+<div class="mb-3">
+<label><b>Status</b></label>
+<select [(ngModel)]="status" class="custom-select" name="status" >
+<option value="">Choose your Status</option>
+<option *ngFor="let item of arr1" [value]="item.status1">{{item.status1}}</option>
+</select>
+</div>
+</div>
+</div>
+<button type="submit"  class="btn btn-primary btn-sm-2 text-white">Submit</button>&nbsp;&nbsp;
+<button type="button" class="btn btn-danger btn-sm-2 text-white" aria-label="Close" (click)="modal.dismiss('Cross click')">Cancel</button> <br/>
+</div>
+</div>
+</div>
+<br/>
+</div>
+</form>
+</ng-template> -->
+<ng-template #content let-modal>
+  <h1 class="center">Edit Task</h1>
+  <form [formGroup]="taskreactive" (ngSubmit)="UpdateItem()">
+  <div class="container">
+  <div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">
+  <label><b>Task ID</b></label>
+  <input formControlName="task_id"   type="text" class="form-control" placeholder="enter name of organisation">
+  </div>
+  <div class="col-xs-6 col-sm-4">
+  <label><b>Due_date</b></label>
+  <input formControlName="due_date"   type="text" class="form-control" placeholder="enter address of organisation">
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-xs-6 col-md-4">
+  <label><b>Title</b></label>
+  <input formControlName="title" class="T" type="text" class="form-control" placeholder="enter description of organisation">
+  </div><br/>
+  </div>
+  <div class="row">
+  <div class="col-xs-6 col-sm-4">
+  <label><b>Desc</b></label>
+  <input formControlName="desc"   type="text" class="form-control" placeholder="enter address of organisation">
+  </div></div>
+  <div class="row">
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-6 col-sm-4">
+  <label><b>Priority</b></label>
+  <input formControlName="priority"   type="text" class="form-control" placeholder="enter city of organisation">
+  </div>
+  <div class="col-xs-6 col-sm-4">
+  <label><b>Assigned_to</b></label>
+  <input formControlName="assigned_to"  type="text" class="form-control" placeholder="enter state of organisation">
+  </div>
+  </div>
+  <div class="row">
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-6 col-sm-4">
+  <label><b>Comments</b></label>
+  <input formControlName="comments"  type="text" class="form-control" placeholder="enter country of organisation">
+  </div>
+  </div>
+  <div class="container">
+  <div class="row custom-wrapper">
+  <div class="col-md-12">
+  <div class="group-gap">
+  <div class="d-block my-3">
+  <div class="mb-3">
+  <label><b>Status</b></label>
+  <select formControlName="status" [(ngModel)]="status" class="custom-select"  >
+  <option value="">Choose your Status</option>
+  <option  *ngFor="let item of arr1" [value]="item.status1">{{item.status1}}</option>
+  </select>
+  </div>
+  </div>
+  </div>
+  <button type="submit"  class="btn btn-primary btn-sm-2 text-white">Submit</button>&nbsp;&nbsp;
+  <button type="button" class="btn btn-danger btn-sm-2 text-white" aria-label="Close" (click)="modal.dismiss('Cross click')">Cancel</button> <br/>
+  </div>
+  </div>
+  </div>
+  <br/>
+  </div>
+  </form>
+  </ng-template>
+
