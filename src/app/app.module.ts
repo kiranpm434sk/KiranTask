@@ -1,26 +1,73 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
-
 import { AppComponent } from './app.component';
-import { TaskdisplayComponent } from './taskdisplay/taskdisplay.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployeedisplayComponent } from './employeedisplay/employeedisplay.component';
+import { HttpClientModule } from "@angular/common/http";
+import { RouterModule,Router } from '@angular/router';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { EditemployeeComponent } from './editemployee/editemployee.component';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { EmpComponent } from './emp/emp.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ConfirmationService, MessageService} from 'primeng/api';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Menu1Component } from './menu1/menu1.component';
+import {SidebarModule} from 'primeng/sidebar';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { routing } from './app.routing';
 
-import { ReactiveFormsModule } from '@angular/forms';
-import { Taskdisplay1Component } from './taskdisplay1/taskdisplay1.component';
-
+import {TableModule} from 'primeng/table';
+import {ToastModule} from 'primeng/toast';
+import {ContextMenuModule} from 'primeng/contextmenu';
+import {DialogModule} from 'primeng/dialog';
+import { PrimengcompComponent } from './primengcomp/primengcomp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskdisplayComponent,
-    Taskdisplay1Component
-  ],
+    EmployeedisplayComponent,
+    AddemployeeComponent,
+    EditemployeeComponent,
+    // PopupComponent,
+    EmpComponent,
+    Menu1Component,
+    SidebarComponent,
+    PrimengcompComponent
+
+
+
+
+    ],
   imports: [
-    BrowserModule,FormsModule,NgbModule,NgbPaginationModule,NgbAlertModule,ReactiveFormsModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([]),
+
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule,
+    ConfirmDialogModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule,
+    SidebarModule,
+    routing,
+    TableModule,
+    ToastModule,
+    ContextMenuModule,
+    DialogModule,
+    ReactiveFormsModule,
+
+    // PaginatorModule
+
+
+
+
   ],
-  providers: [],
+  providers: [ConfirmationService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

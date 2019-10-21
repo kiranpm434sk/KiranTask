@@ -1,0 +1,26 @@
+
+ <table class='table table-striped table-sm table-responsive-sm'>
+  <thead class='table-title'>
+    <tr>
+      <td>Index</td>
+      <td>Name</td>
+      <td>Description</td>
+      <td><i id='text-align-right'>Actions</i></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arr; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.description}}</td>
+      <td>
+          <td>  <a routerLink='/addemp' class="btn btn-primary" role="button">Add</a></td>
+          <td>  <a routerLink='/editemp' class="btn btn-primary" role="button">Edit</a></td>
+         <td>  <a (click)="onEmpDelete(item)" class="btn btn-secondary" role="button">Delete</a></td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+

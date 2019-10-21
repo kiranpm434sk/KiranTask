@@ -1,0 +1,15 @@
+/* .bg{
+  background-image: url("src/assets/imag1.jpg");
+} */
+.image{
+  background-image:url("src\assets\imag1.jpg");
+  height: 80%;
+  width: 100%;
+    position: absolute;
+    display: block;
+    background-size: cover;
+    background-position: 50% 40%;
+    opacity: 6;
+    z-index: -1;
+
+}

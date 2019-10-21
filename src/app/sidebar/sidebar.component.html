@@ -1,0 +1,21 @@
+
+<p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link active active-class" [routerLink]="['/addemp']" routerLinkActive="router-link-active" >Add Employee</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active" >About us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Settings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+</p-sidebar>
+<button pButton type="button" (click)="visibleSidebar1 = true" icon="pi pi-arrow-right"></button>
+

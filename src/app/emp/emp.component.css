@@ -1,0 +1,20 @@
+
+table.table.table-striped.table-sm.table-responsive-sm {
+  width: 91%;
+}
+form.form-inline.mr-auto.ng-untouched.ng-pristine.ng-valid {
+  margin-left: 0;
+}
+
+.image{
+  background-image:url("src\assets\img2.jpg");
+  height: 100%;
+  width: 100%;
+    position: absolute;
+    display: block;
+    background-size: cover;
+    background-position: 50% 40%;
+    opacity: 6;
+    z-index: -1;
+
+}

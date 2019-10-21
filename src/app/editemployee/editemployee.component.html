@@ -1,0 +1,19 @@
+<div class="image"></div>
+<div class="container">
+    <form (ngSubmit)=" onEditEmp(f)"   #f="ngForm" >
+      <div class="form-group">
+        <Label>Employee Name</Label>
+        <input name="name"  [(ngModel)]='name' #Name='ngModel'    class="form-control" placeholder="Enter Employee Name">
+
+      </div>
+      <div class="form-group">
+          <Label>Description </Label>
+          <input name="description"   [(ngModel)]='description' #Description='ngModel' class="form-control" placeholder="Enter Employee Description">
+
+        </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update Employee</button>
+      </div>
+    </form>
+  </div>
+

@@ -127,6 +127,7 @@ status:this.arr[i].status
   this.comments='';
   this.status='';
   alert('Updated Successfully');
+  this.ngOnInit();
   }
   }
   }
