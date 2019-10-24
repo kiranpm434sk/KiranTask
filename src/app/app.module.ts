@@ -24,7 +24,11 @@ import {ToastModule} from 'primeng/toast';
 import {ContextMenuModule} from 'primeng/contextmenu';
 import {DialogModule} from 'primeng/dialog';
 import { PrimengcompComponent } from './primengcomp/primengcomp.component';
+import { TreeTableContextMenuDemoComponent } from './tree-table-context-menu-demo/tree-table-context-menu-demo.component';
 
+import { TreeTableModule } from 'primeng/primeng';
+import { HttpModule } from '@angular/http';
+import { NodeService } from './node.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +39,8 @@ import { PrimengcompComponent } from './primengcomp/primengcomp.component';
     EmpComponent,
     Menu1Component,
     SidebarComponent,
-    PrimengcompComponent
+    PrimengcompComponent,
+    TreeTableContextMenuDemoComponent
 
 
 
@@ -60,6 +65,8 @@ import { PrimengcompComponent } from './primengcomp/primengcomp.component';
     ContextMenuModule,
     DialogModule,
     ReactiveFormsModule,
+    TreeTableModule,
+    HttpModule
 
     // PaginatorModule
 
@@ -67,7 +74,7 @@ import { PrimengcompComponent } from './primengcomp/primengcomp.component';
 
 
   ],
-  providers: [ConfirmationService, MessageService],
+  providers: [ConfirmationService, MessageService,NodeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

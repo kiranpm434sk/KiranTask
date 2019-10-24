@@ -5,13 +5,15 @@ import { EditemployeeComponent } from './editemployee/editemployee.component';
 import { EmpComponent } from './emp/emp.component';
 import { Menu1Component } from './menu1/menu1.component';
 import { PrimengcompComponent } from './primengcomp/primengcomp.component';
+import { TreeTableContextMenuDemoComponent } from './tree-table-context-menu-demo/tree-table-context-menu-demo.component';
 
 const arr : Routes=[
   // {path:'',component:Menu1Component},
   {path:'empdisp',component:EmpComponent},
   {path:'addemp',component:AddemployeeComponent},
   {path:'editemp',component:EditemployeeComponent},
-  {path : 'primeng' , component : PrimengcompComponent}
+  {path : 'primeng' , component : PrimengcompComponent},
+  {path : 'tree' , component : TreeTableContextMenuDemoComponent}
   //{path:'',redirectTo:EmpComponent}
 
 
