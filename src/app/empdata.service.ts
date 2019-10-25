@@ -8,9 +8,9 @@ import { TreeNode } from './tree-table-context-menu-demo/treenode';
 })
 export class EmpdataService {
 
-  url: string = 'https://5df2226b.ngrok.io/api/Settings/GetDesignations';
-  url1: string='https://5df2226b.ngrok.io/api/Settings/InsUpdateDesignation';
-  url2:string ='https://5df2226b.ngrok.io/api/Settings/DeleteDesignation?DesignationId=';
+  url: string = 'https://75d544a5.ngrok.io/api/Settings/GetDesignations';
+  url1: string='https://75d544a5.ngrok.io/api/Settings/InsUpdateDesignation';
+  url2:string ='https://75d544a5.ngrok.io/api/Settings/DeleteDesignation?DesignationId=';
   constructor(private _http: HttpClient) {}
 
   getAllEmployees() {

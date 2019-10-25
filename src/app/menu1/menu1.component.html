@@ -21,11 +21,11 @@
           <i class="fa fa-plus-square" style="font-size:20px;color:red">Add Employees</i></a>
 
       </li>
-
+<!--
       <li class="nav-item">
         <a class="nav-link" routerLink='/editemp' routerLinkActive="router-link-active" (click)="sideclose()">
           <i class="fa fa-pencil-square-o" style="font-size:20px;color:red">Edit Employees </i></a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" routerLink='/primeng' routerLinkActive="router-link-active" (click)="sideclose()">
           <i class="fa fa-shield" style="font-size:20px;color:red">Pime Component </i></a>
@@ -51,6 +51,7 @@
 
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
+
       <li class="nav-item ">
         <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">
           <i class="fa fa-institution" style="font-size:20px; color:black">Home</i><span
@@ -67,11 +68,16 @@
           <i class="fa fa-plus-square" style="font-size:20px;color:black">Add Employees</i> <span
             class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" [routerLink]="['/editemp']" routerLinkActive="router-link-active">
-          <i class="fa fa-pencil-square-o" style="font-size:20px;color:black">Edit Employees </i><span
-            class="sr-only">(current)</span></a>
-      </li><br>
+
+
+        <li class="nav-item">
+            <a class="nav-link" routerLink='/primeng' routerLinkActive="router-link-active" (click)="sideclose()">
+              <i class="fa fa-shield" style="font-size:20px;color:black">Pime Component </i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/tree' routerLinkActive="router-link-active" (click)="sideclose()">
+              <i class="fa fa-tree" style="font-size:20px;color:black">Tree Table </i></a>
+          </li>
       <li class="nav-item">
         <a class="nav-link" href="#"></a>
       </li>
@@ -80,11 +86,18 @@
       </li>
 
     </ul>
-    <a class="navbar-brand " style="right:500px ;"><b><h1>EMPLOYEE DETAILS</h1></b></a>
+    <!-- <a class="navbar-brand " style="right:500px ;"><b><h1>EMPLOYEE DETAILS</h1></b></a> -->
+
   </div>
+
+  <div class="clock"><b>
+      <span class="hour">{{ hours }}:</span>
+      <span class="min">{{ minutes }}:</span>
+      <span class="second">{{ seconds }}</span></b>
+    </div>
 </nav>
 
 
 <marquee><b><i>
-      <h1>SkyCliff IT Pvt. Ltd Dharwad</h1>
+      <h1> Employee Details of SkyCliff IT Pvt. Ltd Dharwad</h1>
     </i></b></marquee>

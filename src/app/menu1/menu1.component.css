@@ -21,3 +21,8 @@ h1 {
   float: 213px;
   margin-left: 190px;
 }
+
+
+.clock {
+  font-size: 3rem;
+}
